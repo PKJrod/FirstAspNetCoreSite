@@ -21,5 +21,10 @@ namespace AlmostEmpty3_1StarterCode.Controllers
         {
             return View();
         }
+
+        public IActionResult Form()
+        {
+            return View();
+        }
     }
 }
