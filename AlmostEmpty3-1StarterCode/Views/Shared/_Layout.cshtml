@@ -1,13 +1,22 @@
 ﻿
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-    </head>
+<head>
+    @*<title>@ViewBag.Title</title>*@
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" /> <!--do not any css files outside webroot folder (is for client side resource) anything outside of it is server side-->
+</head>
     <body>
         <header>
             <h1>Welcome to my first site</h1>
         </header>
+        <nav>
+            @*<a href="/Home/Index" can be used but if the pages were changed would have to change this as well
+            @Html.ActionLink("Home page", "Index", "Home")
+            newer syntax is below to navigate to different webpage older syntax is above.*@
+            <a asp-controller="Home" asp-action="Index">Home Page</a>
+            <a asp-controller="Home" asp-action="About">About Page</a>
+        </nav>
         <main>
             @RenderBody()
         </main>

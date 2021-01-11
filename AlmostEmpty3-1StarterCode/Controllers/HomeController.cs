@@ -10,6 +10,10 @@ namespace AlmostEmpty3_1StarterCode.Controllers
     {
         public IActionResult Index()
         {
+            // Dynamic objecs used for holding data similar to public class { get: set:}
+            // ViewBag.Title = "Home";
+            // Same as above but it is a data structure, an array of indexes by name.
+            ViewData["Title"] = "Home";
             return View();
         }
 
